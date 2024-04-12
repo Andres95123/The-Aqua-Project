@@ -1,0 +1,31 @@
+Escena :
+    Ventajas :
+        - Mucho más impresionante
+        - 
+    Desventajas :
+        - Mucho más trabajo
+        - 
+
+Videojuego :
+    Ventajas :
+        - Lenguaje de programacion parecido a java
+        - Menos trabajo al ya conocer el "lenguaje"
+
+    Desventajas :
+        - Menos espectacular
+
+
+1 . Interactuable con objetos
+2 . Objetos articulados
+3 . Iluminacion especial (Global y Local)
+
+
+Que necesitamos:
+1 . Diferentes tipos de pez(ballenas, tiburones, sirenas...)
+2 . Objetos de decoracion(comida para peces, mesas...)
+3 . Personaje Principal
+4 . Espejo(objetos con reflejo, el reflejo se hace en unity )
+5 . Modelo del acuario
+
+Videos:
+https://www.youtube.com/watch?v=3IqmgsjC6AQ - Reflejo Unity
