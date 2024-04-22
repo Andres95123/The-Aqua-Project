@@ -355,6 +355,7 @@
 "Assets/Scripts/Anomalia.cs"
 "Assets/Scripts/AnomaliaController.cs"
 "Assets/Scripts/DynamicCamera.cs"
+"Assets/Scripts/Enemy.cs"
 "Assets/Scripts/levelChanger.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

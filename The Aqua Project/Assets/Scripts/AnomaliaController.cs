@@ -9,17 +9,16 @@ public class AnomaliaController : MonoBehaviour
     public Anomalia[] anomalias;
     int anomaliaActiva = 0;
 
-    int nivel;
+    static int nivel = 0;
 
     public TMPro.TextMeshProUGUI nivelText;
+    public SceneController sceneControll;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
-        nivel = 0;
-
+        RecargarAnomalia();
     }
 
     public void RecargarAnomalia()
@@ -48,7 +47,7 @@ public class AnomaliaController : MonoBehaviour
         {
             nivel = 0;
         }
-        RecargarAnomalia();
+        sceneControll.ChangeScene("Map");
     }
 
     public void lastLevel()
@@ -61,7 +60,7 @@ public class AnomaliaController : MonoBehaviour
         {
             nivel = 0;
         }
-        RecargarAnomalia();
+        sceneControll.ChangeScene("Map");
     }
 
 
