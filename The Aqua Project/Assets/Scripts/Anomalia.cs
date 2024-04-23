@@ -3,7 +3,7 @@ using UnityEngine;
 public class Anomalia : MonoBehaviour
 {
     static int ids = 0;
-    public int id;
+    int id;
 
     public bool activada;
 
@@ -12,7 +12,9 @@ public class Anomalia : MonoBehaviour
         this.id = ids++;
         SetActivada(false);
         Color randomColor = new Color(Random.value, Random.value, Random.value);
-        GetComponent<Renderer>().material.color = randomColor;
+        if (GetComponent<Renderer>() != null){
+            GetComponent<Renderer>().material.color = randomColor;
+        }
     }
 
     public int GetId()
@@ -27,7 +29,6 @@ public class Anomalia : MonoBehaviour
 
     public void SetActivada(bool activada)
     {
-        Debug.Log("Anomalia activada: " + activada);
         this.activada = activada;
         this.gameObject.SetActive(activada);
     }

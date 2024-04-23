@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnomaliaController : MonoBehaviour
 {
 
-    public Anomalia[] anomalias;
+    Anomalia[] anomalias;
     int anomaliaActiva = 0;
 
     static int nivel = 0;
@@ -18,16 +18,18 @@ public class AnomaliaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anomalias = Resources.LoadAll<Anomalia>("Anomalias");
+        Debug.Log("Numero de anomalias detectadas : " + anomalias.Length);
         RecargarAnomalia();
     }
 
     public void RecargarAnomalia()
     {
-        anomalias[anomaliaActiva].SetActivada(false);
         if (Random.Range(0, 6) > 0)
         {
             // Una de cada 6 veces, no se activa ninguna anomalia
             anomaliaActiva = Random.Range(0, anomalias.Length);
+            anomalias[anomaliaActiva] = Instantiate(anomalias[anomaliaActiva]);
             anomalias[anomaliaActiva].SetActivada(true);
 
         }

@@ -5,13 +5,15 @@ public class Enemy : MonoBehaviour
     private Camera mainCamara;
     private Transform target;
     public float moveSpeed = 5f;
-    public AnomaliaController anomaliaController;
+    private AnomaliaController anomaliaController;
 
     private void Start()
     {
         // Encuentra el objeto del jugador
         target = GameObject.FindGameObjectWithTag("Player").transform;
         mainCamara = Camera.main;
+        
+        anomaliaController = GameObject.FindObjectOfType<AnomaliaController>();
     }
 
     private void Update()
