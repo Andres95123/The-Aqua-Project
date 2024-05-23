@@ -393,6 +393,8 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/utils/CameraMovementMenu.cs"
+"Assets/utils/EyeTracker.cs"
 "Assets/utils/sceneControll.cs"
 -langversion:9.0
 
