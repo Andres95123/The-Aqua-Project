@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Luz
+  - elev01
+  - elev01hallFrame
+  - Interactable
   layers:
   - Default
   - TransparentFX
