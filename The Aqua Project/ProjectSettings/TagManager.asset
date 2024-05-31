@@ -9,6 +9,7 @@ TagManager:
   - elev01
   - elev01hallFrame
   - Interactable
+  - anomalia
   layers:
   - Default
   - TransparentFX
