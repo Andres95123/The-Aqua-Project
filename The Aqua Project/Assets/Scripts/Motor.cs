@@ -63,6 +63,8 @@ public class Motor : MonoBehaviour
         // Una de cada 6 veces, no se activa ninguna anomalia
         if (Random.Range(0, 6) == 0 || nivel == 0)
         {
+            activatedAnomaly = false;
+            Debug.Log("No se activa ninguna anomalia : " + index);
             return;
         }
 
@@ -123,6 +125,7 @@ public class Motor : MonoBehaviour
         {
             // Borrar anomalias vistas
             vistas = null;
+            nivel = 0;
             Debug.Log("Vistas borradas");
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
             return;

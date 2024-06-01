@@ -37,7 +37,7 @@ public class Anomalias : MonoBehaviour
         }
         
         // Log id de la anomalia
-        Debug.Log("Anomalia activada: " + idAnomalia);
+        Debug.Log("Anomalia activada: " + idAnomalia + " | " + this.gameObject.name);
     }
 
 
