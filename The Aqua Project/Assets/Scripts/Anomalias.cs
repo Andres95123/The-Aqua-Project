@@ -19,11 +19,14 @@ public class Anomalias : MonoBehaviour
 
     }
 
+/* 
+    DEJO ESTO COMENTADO POR SI EN UN FUTURO HACE FALTA
+
     public int GetId()
     {
         return idAnomalia;
     }
-
+*/
 
     public void Activar()
     {

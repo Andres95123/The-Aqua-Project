@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float maxVerticalAngle = 85f;
     public float gravityScale = 10f; // Nueva variable para ajustar la gravedad
     private Rigidbody rb;
+    private Animator animator;
     private Transform camTransform;
     private float pitch = 0f;
     private float yaw = 0f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         camTransform = Camera.main.transform;
         camTransform.position = new Vector3(transform.position.x, transform.position.y + cameraHeight, transform.position.z);
         yaw = transform.eulerAngles.y;
@@ -28,6 +30,13 @@ public class PlayerController : MonoBehaviour
         // Get input for movement
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+
+        //Animacion de mover al personaje
+        if(moveHorizontal!=0.0 || moveVertical!=0.0){
+            animator.SetFloat("Speed",1);
+        }else{
+            animator.SetFloat("Speed",0);
+        }
 
         // Calculate movement direction based on camera's forward and right vectors
         Vector3 movement = (camTransform.forward * moveVertical + camTransform.right * moveHorizontal).normalized;

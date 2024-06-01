@@ -13,6 +13,7 @@ public class Motor : MonoBehaviour
     // Nivel
     public static int nivel = 0;
     private bool activatedAnomaly;
+    private int index;
     private static int nivelMaximo;
 
     private Anomalias anomalia;
@@ -66,13 +67,13 @@ public class Motor : MonoBehaviour
         }
 
         // Selecciona una anomalia aleatoria
-
-        int index = Random.Range(0, anomalias.Length);
+        index = Random.Range(0, anomalias.Length);
         while (vistas[index])
         {
             index = Random.Range(0, anomalias.Length);
         }
 
+        //Debug.Log("Index: "+index);
         anomalia = anomalias[index];
 
         // Activa la anomalia
@@ -87,15 +88,14 @@ public class Motor : MonoBehaviour
         // Si habia una anomalia sumar un nivel, sino bajar a 0
         if (activatedAnomaly)
         {
-            vistas[anomalia.GetId()] = true;
+            vistas[index] = true;
             nivel++;
         }
         else
         {
             nivel = 0;
         }
-
-            resetLevel();
+        resetLevel();
     }
 
 
@@ -117,7 +117,7 @@ public class Motor : MonoBehaviour
 
     private void resetLevel()
     {
-
+        Anomalias.idAnomalias = 0;
         // Si todas han sido vistas, volver al menu
         if (vistas.All(vista => vista))
         {
@@ -127,9 +127,8 @@ public class Motor : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
             return;
         }
-
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        Anomalias.idAnomalias = 0;
+        
     }
 
 
