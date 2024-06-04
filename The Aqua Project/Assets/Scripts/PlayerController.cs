@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Transform camTransform;
     private float pitch = 0f;
     private float yaw = 0f;
+    public float sprintVel = 1.25f;
 
     private void Start()
     {
@@ -92,6 +93,13 @@ public class PlayerController : MonoBehaviour
         // Calculate movement direction based on camera's forward and right vectors
         Vector3 movement = (camTransform.forward * moveVertical + camTransform.right * moveHorizontal);
         movement.y = 0f; // Ensure no vertical movement
+
+        // Check if Shift is pressed
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            movement *= sprintVel; // Increase speed by 1.5x
+        }
+
 
         // Move the player
         rb.velocity = new Vector3(movement.x * moveSpeed, rb.velocity.y, movement.z * moveSpeed);
