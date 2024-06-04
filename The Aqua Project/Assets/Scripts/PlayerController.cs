@@ -79,8 +79,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Get input for movement
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
         //Animacion de mover al personaje
         if(moveHorizontal!=0.0 || moveVertical!=0.0){
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Calculate movement direction based on camera's forward and right vectors
-        Vector3 movement = (camTransform.forward * moveVertical + camTransform.right * moveHorizontal).normalized;
+        Vector3 movement = (camTransform.forward * moveVertical + camTransform.right * moveHorizontal);
         movement.y = 0f; // Ensure no vertical movement
 
         // Move the player
@@ -117,4 +117,5 @@ public class PlayerController : MonoBehaviour
         // Update camera position
         camTransform.position = new Vector3(transform.position.x, transform.position.y + cameraHeight, transform.position.z);
     }
+
 }
