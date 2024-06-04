@@ -50,9 +50,17 @@ public class AscensorInteractivo : MonoBehaviour
         Cursor.visible = true; // Hacer el cursor visible
     }
 
+    public void HideCanvas()
+    {
+        canvas.SetActive(false);
+        isCanvasActive = false;
+        Time.timeScale = 1f; // Reanudar el tiempo
+        Cursor.lockState = CursorLockMode.Locked; // Volver a bloquear el cursor
+        Cursor.visible = false; // Ocultar el cursor
+    }
+
     private void OnOptionSelected(int option)
     {
-        Debug.Log("Option " + option + " selected");
         canvas.SetActive(false);
         isCanvasActive = false;
         Time.timeScale = 1f; // Reanudar el tiempo
