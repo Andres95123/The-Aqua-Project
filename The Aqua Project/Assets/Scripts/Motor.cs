@@ -127,7 +127,7 @@ public class Motor : MonoBehaviour
             vistas = null;
             nivel = 0;
             Debug.Log("Vistas borradas");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+            FinalScript.acabado=true;
             return;
         }
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
