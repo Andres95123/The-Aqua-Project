@@ -19,11 +19,14 @@ public class Anomalias : MonoBehaviour
 
     }
 
+/* 
+    DEJO ESTO COMENTADO POR SI EN UN FUTURO HACE FALTA
+
     public int GetId()
     {
         return idAnomalia;
     }
-
+*/
 
     public void Activar()
     {
@@ -34,7 +37,7 @@ public class Anomalias : MonoBehaviour
         }
         
         // Log id de la anomalia
-        Debug.Log("Anomalia activada: " + idAnomalia);
+        Debug.Log("Anomalia activada: " + idAnomalia + " | " + this.gameObject.name);
     }
 
 
