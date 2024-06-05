@@ -19,6 +19,11 @@ public class PostProcessingController : MonoBehaviour
 
     private void Start()
     {
+        Actualizar();
+    }
+
+    public static void Actualizar()
+    {
         // Obtener la cámara principal y agregarle el componente PostProcessVolume si no lo tiene
         Camera cam = Camera.main;
         if (cam != null)
