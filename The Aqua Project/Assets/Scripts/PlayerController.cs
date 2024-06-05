@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         camTransform = Camera.main.transform;

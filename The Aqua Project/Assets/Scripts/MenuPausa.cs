@@ -41,6 +41,7 @@ public class MenuPausa : MonoBehaviour
     public void LoadMenu(){
         Cursor.lockState = CursorLockMode.Locked; // Volver a bloquear el cursor
         Cursor.visible = false; // Ocultar el cursor
+        Time.timeScale=1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }

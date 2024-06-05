@@ -10,6 +10,7 @@ TagManager:
   - elev01hallFrame
   - Interactable
   - anomalia
+  - PPV
   layers:
   - Default
   - TransparentFX
